@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your website description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website - University</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+    <style>
+        .transparent-image:hover {
+            opacity: 0.8;
+        }
+        .show-more-content {
+            overflow: hidden;
+            height: 100px; 
+            transition: height 0.5s ease;
+        }
+        .show-more-button {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .show-more-button a {
+            color: blue;
+        }
+        .show-more-button a:hover {
+            color: red;
+        }
+        .show-more-button.open a {
+            color: green;
+        }
+        .selected-tab {
+            font-size: 1.2rem;
+        }
+    </style>
+    <script>
+        function toggleShowMore() {
+            var content = document.getElementById("show-more-content");
+            var button = document.getElementById("show-more-button");
+
+            if (content.style.height === "100px") {
+                content.style.height = "auto";
+                button.classList.add("open");
+            } else {
+                content.style.height = "100px";
+                button.classList.remove("open");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="home.html">Home</a>
+                        <a class="nav-link active selected-tab" href="university.html">University</a>
+                        <a class="nav-link" href="academics.html">Academics</a>
+                        <a class="nav-link" href="students.html">Students</a>
+                        <a class="nav-link" href="campuslife.html">Campus Life</a>
+                        
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-9">
+                <h1>University</h1>
+                <div>
+                    <img src="university-image.jpg" alt="University Image" class="transparent-image">
+                </div>
+                <div id="show-more-content" class="show-more-content">
+                    <p>Established with the Law No. 7141 published in the Official Gazette dated May 18, 2018 and numbered 30425, Eskişehir Technical University has 5 Faculties, 2 Vocational Schools, 1 High School and 3 campuses located in the center of Eskişehir, which is a city of science, culture and also a youth city. It consists of the Institute and 4 Research and Application Centers. Eskişehir Technical University, in its units with a strong infrastructure run by the education and research business, with its competent staff who follow the development in each region and share all their time with their extensions, work to structure their souls to design and limit the future in the most creative and dynamic educational environments. The operation of the international Hasan Polatkan Airport, located in the 2 Eylül Campus of our university, is carried out by our Faculty of Aviation and Space Sciences. There are international flights to Hasan Polatkan Airport by various institutions for different purposes.p>
+                    
+                    <p>STAFF 1566 STUDENT 15458 INSTITUTE 3 FACULTY 5 VOCATIONAL SCHOOL 2 SCHOOL 1</p>
+                </div>
+                <div class="show-more-button">
+                    <a href="#" onclick="toggleShowMore(); return false;" id="show-more-button">Less/More Show</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+<div class="container-fluid">
+<p>© 2023 University. All rights reserved.</p>
+</div>
+</footer>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
